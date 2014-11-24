@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="drink">
+	<head>
+		<title>It's 5 O'Clock!</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="jquery-ui-1.11.2.custom/jquery-ui.css"/>
+		<link rel="stylesheet" type="text/css" href="css/drink.css"/>
+	</head>
+	<body>
+		<div ng-controller="DrinkController as dC">
+
+			<label>Enter the time:</label>
+			<input id="uHour" type="text" size=2></input>:
+			<input id="uMinute" type="text" size=2/>
+			<input id="drank" type="button" value="Enter" />
+			
+			<div class="center" id="dialog">
+				<div class="center"  id="imageHolder">
+					<div id="negatives" > <!--id="test"-->
+						
+					</div>
+					<div id="positives">
+
+					</div>
+				</div>
+			</div>
+			
+
+			<input ng-model="name" type="text"/>
+			<p ng-bind="name"></p>
+
+			<h1><p id="lbl">{{dC.dt.dHour}}</p>
+				<p>{{dC.dt.dMinute}}</p>{{1 + 6}}</h1>
+			<h2 ng-show="dC.dt.drinking">{{drinkClock.drinkTime.drinking}}</h2>
+		</div>
+		<script type="text/javascript" src="js/jquery-2.1.1.js"></script>	
+		<script type="text/javascript" src="jquery-ui-1.11.2.custom/jquery-ui.js"></script>	<!---->
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/drink-ang.js"></script>
+		<script type="text/javascript" src="js/drink.js" ></script>
+	</body>
+	
+</html>
